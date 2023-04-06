@@ -1,0 +1,11 @@
+
+--Crea el .exe sin el problema que tiene el py2exe (el error dice que falta un archivo "main-py")
+pyinstaller --paths='/usr/local/lib/python3.6/dist-packages/cv2/python-3.6' .\take_photo.py
+
+
+--Crea el .exe con py2exe
+python setup.py py2exe
+
+
+--Crea el .exe en un solo archivo y sin mostrar consola
+pyinstaller --noconsole --onefile take_photo.py
